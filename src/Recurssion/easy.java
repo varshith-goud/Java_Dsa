@@ -10,6 +10,9 @@ public class easy {
         System.out.println(add(5));
         System.out.println(SumDigits(143));
         System.out.println(productDigits(143));
+        System.out.println( revNum(143,0));
+
+        System.out.println(palindrome(141));
     }
     static void print(int n){
         if(n==0){
@@ -57,6 +60,19 @@ public class easy {
         }
         return (n%10)*productDigits(n/10);
 
+    }
+
+    static int revNum(int n,int rev){
+        if(n==0){
+            return rev ;
+        }
+        int rem =n%10;
+
+       return revNum(n/10,rev*10+rem);
+    }
+
+    static boolean palindrome(int n){
+        return n == revNum(n,0);
     }
 }
 
