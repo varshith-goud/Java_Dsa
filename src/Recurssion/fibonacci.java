@@ -1,4 +1,4 @@
-package arrays_dsa.Recurssion;
+package Recurssion;
 
 public class fibonacci {
     public static void main(String[] args) {
